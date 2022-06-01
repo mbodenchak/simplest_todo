@@ -2,10 +2,12 @@ import { useState } from "react";
 
 const InputArea = (props) => {
   const [inputText, setInputText] = useState("");
-  const handleChange = (e) => {
-    const newValue = e.target.value;
+
+  const handleChange = (event) => {
+    const newValue = event.target.value;
     setInputText(newValue);
   };
+
   return (
     <div className="form">
       <input type="text" onChange={handleChange} value={inputText} />
